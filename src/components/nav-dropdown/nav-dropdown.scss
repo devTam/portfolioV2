@@ -2,19 +2,21 @@
   //   Change to 120vh also animate from 0vh to 120vh
   height: 100vh;
   width: 100%;
-  position: fixed;
+  position: absolute;
   top: 8vh;
   left: 0;
+  right: 0;
   z-index: 2;
   display: grid;
   place-items: center;
   display: flex;
   flex-direction: column;
+  background-color: var(--black);
 }
 
 .nav-dropdown__content {
   color: var(--white);
-  background-color: var(--black);
+  
   width: 100%;
   height: 80%;
   overflow: hidden;

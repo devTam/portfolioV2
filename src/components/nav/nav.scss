@@ -1,4 +1,10 @@
 .nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
   padding: 0 var(--padding-desktop);
   height: 8vh;
   background-color: var(--black);
@@ -28,36 +34,40 @@
 }
 
 .nav__menu {
-  overflow: hidden;
+
   cursor: pointer;
-  position: relative;
   padding: 5px 0;
   transition: color 0.3s;
+  overflow: hidden;
+  position: relative;
+  height: 19px;
+  width: 60px;
 
   @media (hover: hover) {
     &:hover {
       color: var(--color-primary);
     }
-    &:hover::before {
-      width: 100%;
-    }
   }
-
-  &::before {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 0%;
-    height: 3px;
-    bottom: 0px;
-    left: 0;
-    background-color: var(--white);
-    border-radius: 6px;
-    transition: width 0.25s var(--nav-easing);
-  }
-
+ 
   &-dot {
     color: var(--color-primary);
     margin-left: 2px;
   }
+}
+
+.nav__menu-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: top .5s ease-in;
+}
+
+// Will use gsap to handle these in a timeline
+
+.close {
+  top: -100%;
+}
+
+.toggle {
+  top: 100%;
 }

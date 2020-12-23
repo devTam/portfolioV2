@@ -14,9 +14,11 @@ body {
 :root {
   --color-primary : #EEB336;
   --white: #fff;
-  --white-bg: #FAFAFA;
+  --white-bg: #e5e5e5;
   --black: #080808;
   --padding-desktop: 60px;
   --padding-mobile:8px;
+  --text-white: #fdf9d1;
+  --dark-primary: #261A01;
   --nav-easing: cubic-bezier(.55,.07,1,.78);
 }
