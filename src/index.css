@@ -15,7 +15,8 @@ body {
   --color-primary : #EEB336;
   --white: #fff;
   --white-bg: #FAFAFA;
-  --black: #000;
+  --black: #080808;
   --padding-desktop: 60px;
   --padding-mobile:8px;
+  --nav-easing: cubic-bezier(.55,.07,1,.78);
 }

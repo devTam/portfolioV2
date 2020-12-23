@@ -1,32 +1,63 @@
 .nav {
-    padding: 0 var(--padding-desktop);
-    height: 8vh;
-    background-color: var(--black);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--white);
-    @media only screen and (max-width: 576px) {
-        padding: 0 var(--padding-mobile);
-    }
+  padding: 0 var(--padding-desktop);
+  height: 8vh;
+  background-color: var(--black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
+  @media only screen and (max-width: 576px) {
+    padding: 0 var(--padding-mobile);
+  }
 }
 
 .nav__logo-container {
-    height: 100%;
-    display: grid;
-    place-items: center;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .nav__logo {
-    height: 3vh;
-    stroke:  2px #000;
+  height: 4vh;
+
+  @media only screen and (max-width: 576px) {
+    height: 2.5vh;
+  }
 }
 
 .nav__menu {
-    overflow: hidden;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s;
 
-    &-dot {
-        color: var(--color-primary);
-        margin-left: 2px;
+  @media (hover: hover) {
+    &:hover {
+      color: var(--color-primary);
     }
+    &:hover::before {
+      width: 100%;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0%;
+    height: 3px;
+    bottom: 0px;
+    left: 0;
+    background-color: var(--white);
+    border-radius: 6px;
+    transition: width 0.25s var(--nav-easing);
+  }
+
+  &-dot {
+    color: var(--color-primary);
+    margin-left: 2px;
+  }
 }

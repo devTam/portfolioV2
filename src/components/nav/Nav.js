@@ -1,11 +1,12 @@
 import React from 'react';
 import { ReactComponent as Logo } from "../../assets/logo.svg";
+import { withRouter } from "react-router-dom";
 import './nav.scss';
 
-const Nav = () => {
+const Nav = ({ history }) => {
   return (
     <div className="nav">
-      <div className="nav__logo-container">
+      <div className="nav__logo-container" onClick={() => history.push("/")}>
           <Logo className="nav__logo"/>
       </div>
       <div className="nav__menu">
@@ -17,4 +18,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default withRouter(Nav);
