@@ -3,3 +3,18 @@
     min-height: 100vh;
     background-color: var(--white-bg);
 }
+
+.projects__container {
+    padding: 0 var(--padding-desktop);
+}
+
+.projects__title {
+    font-size: 5rem;
+    margin-top: 9rem;
+    margin-left: 4rem;
+    color: var(--text-black);
+
+    & span {
+        color: var(--color-primary);
+    }
+}

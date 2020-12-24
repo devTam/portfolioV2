@@ -20,5 +20,6 @@ body {
   --padding-mobile:8px;
   --text-white: #fdf9d1;
   --dark-primary: #261A01;
+  --text-black: #333;
   --nav-easing: cubic-bezier(.55,.07,1,.78);
 }

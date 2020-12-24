@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './homepage.scss';
 import { Link } from 'react-router-dom';
+import Canvas from '../../components/canvas/Canvas'
 
 const HomePage = () => {
+
+    useEffect(() => {
+        Canvas();
+    }, [])
   return (
     <div className="homepage">
       <div className="homepage__container">
@@ -28,7 +33,7 @@ const HomePage = () => {
           </Link>
         </div>
       </div>
-      <div className="blobs">
+      {/* <div className="blobs">
         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="blob">
           <path
             fill="rgba(38, 26, 1, 0.4)"
@@ -36,7 +41,7 @@ const HomePage = () => {
             transform="translate(100 100)"
           />
         </svg>
-      </div>
+      </div> */}
     </div>
   );
 };
