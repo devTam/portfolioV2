@@ -2,7 +2,7 @@ import React from 'react';
 import './nav-dropdown.scss';
 import { NavLink } from 'react-router-dom';
 import { ReactComponent as Wave } from '../../assets/wave.svg';
-import Resume from "../../assets/TammyBatuboResume.pdf";
+import Resume from '../../assets/TammyBatuboResume.pdf';
 
 const NavDropdown = () => {
   return (
@@ -26,7 +26,7 @@ const NavDropdown = () => {
           </div>
           <div className="nav-item-container">
             <a href={Resume} className="nav-item" download="TammyBatuboResume">
-            <i class="fas fa-file-download"></i>
+              <i className="fas fa-file-download"></i>
               Resume
             </a>
           </div>
@@ -37,20 +37,22 @@ const NavDropdown = () => {
               href="https://www.linkedin.com/in/tammy-batubo-4023b6119/"
               className="nav-icons"
               target="_blank"
+              rel="noreferrer"
             >
-              <i class="fab fa-linkedin"></i>
+              <i className="fab fa-linkedin"></i>
               <span className="nav-socials__text">Tammy-Batubo</span>
             </a>
             <a
               href="https://twitter.com/dev_TamB"
               className="nav-icons"
               target="_blank"
+              rel="noreferrer"
             >
-              <i class="fab fa-twitter-square"></i>
+              <i className="fab fa-twitter-square"></i>
               <span className="nav-socials__text">@dev_TamB</span>
             </a>
             <a href="mailto:tammy.batubo@gmail.com" className="nav-icons">
-              <i class="fab fa-google-plus-square"></i>
+              <i className="fab fa-google-plus-square"></i>
               <span className="nav-socials__text">Tammy.batubo@gmail.com</span>
             </a>
           </div>

@@ -1,7 +1,9 @@
 .homepage {
   height: 100vh;
+  max-height: 100vh;
   padding-left: var(--padding-desktop);
   padding-right: var(--padding-desktop);
+  position: relative;
   overflow: hidden;
 
   @media only screen and (max-width: 576px) {
@@ -12,23 +14,57 @@
   &__title {
     margin-bottom: 10px;
     overflow: hidden;
+    position: relative;
+    z-index: 2;
+
+    @media only screen and (max-width: 768px) {
+      margin-bottom: 20px;
+    }
 
     &-items {
       font-size: 2.5rem;
       line-height: 1.5;
       color: var(--text-white);
       text-shadow: 0 2px 5px hsl(41, 87, 10);
+
+      @media only screen and (max-width: 768px) {
+        font-size: 2rem;
+      }
+
+      @media only screen and (max-width: 576px) {
+        font-size: 1.5rem;
+        line-height: 1.4;
+        padding: 0 var(--padding-mobile);
+      }
+
+      & span {
+        color: var(--color-primary);
+      }
     }
   }
 
   &__subtitle {
     margin-bottom: 30px;
     overflow: hidden;
+    position: relative;
+    z-index: 2;
+
+    @media only screen and (max-width: 768px) {
+      margin-bottom: 40px;
+    }
 
     &-items {
       font-size: 1.5rem;
       color: var(--dark-primary);
       letter-spacing: 1.2px;
+
+      @media only screen and (max-width: 768px) {
+        font-size: 1rem;
+      }
+
+      @media only screen and (max-width: 576px) {
+        padding: 0 var(--padding-mobile);
+      }
     }
   }
 }
@@ -41,12 +77,19 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    padding-left: 0;
+  }
 }
 
 .homepage__btns {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 
 .homepage__btn {
@@ -57,20 +100,52 @@
   font-weight: bold;
   font-size: 1rem;
   cursor: pointer;
+  text-decoration: none;
+  color: var(--black);
   background-color: var(--text-white);
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  transition: all .3s;
+  transition: all 0.3s;
   transform: translateZ(0);
   backface-visibility: hidden;
 
-  &:hover {
-    box-shadow: 0px 15px 20px rgba(38, 26, 1, 0.5);
-    transform: translateY(-2px);
+  @media only screen and (max-width: 768px) {
+    font-size: 0.8rem;
+  }
+
+  @media only screen and (max-width: 576px) {
+    margin: 0 var(--padding-mobile);
+    padding: 13px 15px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      box-shadow: 0px 15px 20px rgba(38, 26, 1, 0.5);
+      transform: translateY(-2px);
+    }
   }
 }
 
-
-
 .btn-secondary {
-    background: linear-gradient(90deg, #FDEBC5, #F4CB73);
+  background: linear-gradient(90deg, #fdebc5, #f4cb73);
+}
+
+.blobs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+
+  & .blob {
+    width: 70vw;
+    animation: rotate 20s infinite linear;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
 }
