@@ -8,6 +8,7 @@
 
   @media only screen and (max-width: 992px) {
     grid-template-columns: 1fr;
+    margin-bottom: 5rem;
   }
 }
 
@@ -24,20 +25,29 @@
     margin-bottom: 30px;
   }
 
+  @media only screen and (max-width: 576px) {
+    margin-bottom: 0;
+  }
+
   &.display-right {
     grid-column: 2/3;
 
     @media only screen and (max-width: 992px) {
       grid-column: unset;
-      // order: 2;
     }
   }
 }
 
 .row__mockup {
   height: 300px;
+
   @media only screen and (max-width: 1200px) {
     height: 250px;
+  }
+
+  @media only screen and (max-width: 576px) {
+    height: unset;
+    width: 100%;
   }
 }
 
@@ -54,19 +64,31 @@
     @media only screen and (max-width: 992px) {
       grid-column: unset;
       grid-row: unset;
-      // order: 2;
     }
   }
 
   .row__title {
-      color: var(--text-black);
-      font-size: 1.8rem;
+    color: var(--text-black);
+    font-size: 1.8rem;
     margin-bottom: 10px;
+
+    @media only screen and (max-width: 992px) {
+      font-size: 1.5rem;
+    }
+
+    @media only screen and (max-width: 576px) {
+      font-size: 1.2rem;
+      text-align: center;
+    }
   }
 
   .row__desc {
     margin-bottom: 20px;
     font-size: 1rem;
+
+    @media only screen and (max-width: 576px) {
+      font-size: 0.9rem;
+    }
   }
 
   .row__btns {
@@ -75,7 +97,7 @@
   }
 
   .row__btn {
-    font-size: .9rem;
+    font-size: 0.9rem;
     color: var(--text-black);
     padding: 8px 15px;
     margin-right: 1em;
@@ -91,8 +113,18 @@
     display: inline-block;
     z-index: 0;
 
-    &:hover {
-      color: var(--color-primary);
+    @media only screen and (max-width: 576px) {
+      font-size: 0.7rem;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--color-primary);
+      }
+
+      &:hover:before {
+        width: 100%;
+      }
     }
 
     &:before {
@@ -105,10 +137,6 @@
       background-color: var(--black);
       transition: width 0.2s cubic-bezier(0.54, 0.02, 1, 0.47);
       z-index: -1;
-    }
-
-    &:hover:before {
-      width: 100%;
     }
   }
 }

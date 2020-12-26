@@ -12,6 +12,10 @@
 
 .projects__container {
   padding: 0 var(--padding-desktop);
+
+  @media only screen and (max-width: 576px) {
+    padding: 0 var(--padding-mobile);
+  }
 }
 
 .projects__title {
@@ -30,6 +34,18 @@
     font-size: 3.5rem;
   }
 
+  @media only screen and (max-width: 576px) {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 7rem;
+    margin-bottom: 3rem;
+    margin-left: 0;
+  }
+
+  @media only screen and (max-width: 300px) {
+    font-size: 2.5rem;
+  }
+
   & span {
     color: var(--color-primary);
   }
@@ -40,4 +56,8 @@
   bottom: 0;
   left: 0;
   z-index: 0;
+
+  @media only screen and (max-width: 992px) {
+    display: none;
+  }
 }
