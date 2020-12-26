@@ -51,6 +51,34 @@
   }
 }
 
+.projects__socials {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+
+  @media only screen and (max-width: 576px) {
+    position: absolute;
+    flex-direction: row;
+  }
+}
+
+.projects-icons{
+  color: var(--black);
+  text-decoration: none;
+  margin: 4px;
+
+  &:hover i {
+    color: var(--color-primary);
+  }
+
+  & i {
+    font-size: 1.5rem;
+  transition: color .25s;
+  }
+}
+
 .projects__waves {
   position: absolute;
   bottom: 0;
