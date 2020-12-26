@@ -1,5 +1,56 @@
 .contact {
-    margin-top: 8vh;
-    background-color: var(--white-bg);
-    min-height: 100vh;
+  margin-top: 2vh;
+  min-height: 100vh;
+  background-color: var(--white-bg);
+  position: relative;
+  overflow: hidden;
+
+  @media only screen and (max-width: 992px) {
+    margin-top: 0;
+  }
+}
+
+.contact__container {
+  padding: 0 var(--padding-desktop);
+
+  @media only screen and (max-width: 576px) {
+    padding: 0 var(--padding-mobile);
+  }
+}
+
+.contact__title {
+  overflow-y: hidden;
+  font-size: 5rem;
+  margin-top: 9rem;
+  margin-left: 4rem;
+  margin-bottom: 4rem;
+  color: var(--text-black);
+
+  @media only screen and (max-width: 1200px) {
+    font-size: 4.5rem;
+  }
+
+  @media only screen and (max-width: 992px) {
+    font-size: 3.5rem;
+    margin-left: 0;
+  }
+
+  @media only screen and (max-width: 576px) {
+    font-size: 3rem;
+    margin-top: 7rem;
+    margin-bottom: 3rem;
+    margin-left: 0;
+  }
+
+  @media only screen and (max-width: 300px) {
+    font-size: 2rem;
+  }
+
+  & .colored {
+    color: var(--color-primary);
+  }
+}
+
+.slider__container {
+  overflow-y: hidden;
 }

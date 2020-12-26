@@ -3,6 +3,7 @@ import { undoCanvas } from '../../utils/undoCanvas';
 import './projects.scss';
 import projectDetails from '../../utils/projectDetails';
 import Row from '../../components/row/Row';
+import SocialIcons from '../../components/social-icons/SocialIcons';
 
 const Projects = () => {
   useEffect(() => {
@@ -43,28 +44,8 @@ const Projects = () => {
           d="M0,160L60,138.7C120,117,240,75,360,64C480,53,600,75,720,122.7C840,171,960,245,1080,261.3C1200,277,1320,235,1380,213.3L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
         ></path>
       </svg>
-      <div className="projects__socials">
-      <a
-              href="https://www.linkedin.com/in/tammy-batubo-4023b6119/"
-              className="projects-icons"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i className="fab fa-linkedin"></i>
-
-            </a>
-            <a
-              href="https://twitter.com/dev_TamB"
-              className="projects-icons"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i className="fab fa-twitter-square"></i>
-            </a>
-            <a href="mailto:tammy.batubo@gmail.com" className="projects-icons">
-              <i className="fab fa-google-plus-square"></i>
-            </a>
-      </div>
+      <SocialIcons />
+      
     </div>
   );
 };
