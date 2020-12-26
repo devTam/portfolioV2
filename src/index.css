@@ -21,5 +21,5 @@ body {
   --text-white: #fdf9d1;
   --dark-primary: #261A01;
   --text-black: #333;
-  --nav-easing: cubic-bezier(.55,.07,1,.78);
+  --nav-easing: cubic-bezier(0.54, 0.02, 1, 0.47);
 }

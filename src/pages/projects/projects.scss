@@ -4,6 +4,10 @@
   background-color: var(--white-bg);
   position: relative;
   overflow: hidden;
+
+  @media only screen and (max-width: 992px) {
+    margin-top: 0;
+  }
 }
 
 .projects__container {
@@ -17,26 +21,23 @@
   margin-bottom: 4rem;
   color: var(--text-black);
 
+  @media only screen and (max-width: 1200px) {
+    font-size: 4.5rem;
+    margin-left: 2rem;
+  }
+
+  @media only screen and (max-width: 992px) {
+    font-size: 3.5rem;
+  }
+
   & span {
     color: var(--color-primary);
   }
 }
 
-// .blob1 {
-//   background-color: #000000;
-//   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' %3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(0,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%23f4cb73'/%3E%3Cstop offset='1' stop-color='%23f4cb73'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpattern id='b' width='9' height='9' patternUnits='userSpaceOnUse'%3E%3Ccircle fill='%23000000' cx='4.5' cy='4.5' r='4.5'/%3E%3C/pattern%3E%3Crect width='100%25' height='100%25' fill='url(%23a)'/%3E%3Crect width='100%25' height='100%25' fill='url(%23b)' fill-opacity='0.13'/%3E%3C/svg%3E");
-//   background-attachment: fixed;
-//   background-size: cover;
-//   position: absolute;
-//   width: 250px;
-//   height: 250px;
-//   right: -70px;
-//   top: -80px;
-//   border-radius: 50%;
-// }
-
 .projects__waves {
-    position: relative;
-    z-index: 0;
-    margin-top: -500px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
 }
