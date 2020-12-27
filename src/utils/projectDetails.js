@@ -9,7 +9,7 @@ const projectDetails = [
   },
   {
     image: 'https://i.postimg.cc/G29Ns9DH/github-min.png',
-    name: 'Github Clone',
+    name: 'Github profile',
     desc: 'A github clone including features such as Oauth sign in with github, dark mode toggle, past year contribution graph and more...',
     demo: 'https://github-full.netlify.app',
     github: 'https://github.com/devTam/github-clone'
