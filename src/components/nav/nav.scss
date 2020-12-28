@@ -36,12 +36,17 @@
 .nav__menu {
 
   cursor: pointer;
-  padding: 5px 0;
+  font-family: 'Montserrat', sans-serif;
   transition: color 0.3s;
   overflow: hidden;
   position: relative;
   height: 19px;
   width: 60px;
+  border: none;
+  background-color: transparent;
+  color: var(--white);
+  outline-width: 0;
+  font-size: 1rem;
 
   @media (hover: hover) {
     &:hover {
@@ -59,7 +64,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  transition: top .5s ease-in;
+  transition: top .8s ease-in;
 }
 
 // Will use gsap to handle these in a timeline

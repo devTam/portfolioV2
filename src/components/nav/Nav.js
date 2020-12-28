@@ -1,14 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 import { withRouter } from "react-router-dom";
 import './nav.scss';
 import NavDropdown from '../nav-dropdown/NavDropdown';
 
 const Nav = ({ history }) => {
-  const [toggleNav, setToggleNav] = useState(false);
+  const [state, setState] = useState({
+    initial: false,
+    clicked: null
+  });
+
+  // close menu afterlink is clicked
+  useEffect(() => {
+   history.listen(() => {
+     setState({
+
+     });
+   }) 
+  },[history])
 
   const handleClick = () => {
-    setToggleNav(!toggleNav);
+    if(state.initial === false) {
+      setState({
+        initial: null,
+        clicked: true
+      })
+    }else if(state.clicked === true) {
+      setState({
+        clicked: !state.clicked
+      })
+    }else if(state.clicked === false) {
+      setState({
+        clicked: !state.clicked
+      })
+    }
   }
 
   return (
@@ -16,18 +41,15 @@ const Nav = ({ history }) => {
       <div className="nav__logo-container" onClick={() => history.push("/")}>
           <Logo className="nav__logo"/>
       </div>
-      <div className="nav__menu" onClick={handleClick}>
-        <h4 className={`nav__menu-item open ${toggleNav && "toggle"}`}>
+      <button className="nav__menu" onClick={handleClick}>
+        <h4 className={`nav__menu-item open ${state.clicked && "toggle"}`}>
           menu<span className="nav__menu-dot">.</span>
         </h4>
-        <h4 className={`nav__menu-item ${!toggleNav && "close"}`}>
+        <h4 className={`nav__menu-item ${!state.clicked && "close"}`}>
           close<span className="nav__menu-dot">.</span>
         </h4>
-      </div>
-      {
-        toggleNav && <NavDropdown />
-      }
-    
+      </button>
+      <NavDropdown state={state} />
     </div>
   );
 };

@@ -1,5 +1,4 @@
 .nav-dropdown {
-  //   Change to 120vh also animate from 0vh to 120vh
   height: 100vh;
   width: 100%;
   position: absolute;
@@ -12,19 +11,26 @@
   display: flex;
   flex-direction: column;
   background-color: var(--black);
+  overflow: hidden;
+  display: none;
+}
+
+.menu-layer {
+  width: 100%;
+  height: 100%;
 }
 
 .nav-dropdown__content {
   color: var(--white);
-  
+
   width: 100%;
-  height: 80%;
   overflow: hidden;
   padding-top: 3rem;
 }
 
 .nav-item-container {
   text-align: center;
+  overflow: hidden;
 }
 
 .nav-item {
@@ -52,12 +58,10 @@
       color: var(--color-primary);
     }
   }
-
- 
 }
 
 .fa-file-download {
-    margin-right: 8px;
+  margin-right: 8px;
 }
 
 .nav-socials {
@@ -73,12 +77,13 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  opacity: 1;
 }
 
 .nav-socials__text {
   white-space: nowrap;
   margin-left: 5px;
-  transition: all .25s;
+  transition: all 0.25s;
 
   @media only screen and (max-width: 800px) {
     display: none;
@@ -105,11 +110,5 @@
   height: 100%;
   width: 100%;
   color: var(--white);
-  transition: color .25s;
+  transition: color 0.25s;
 }
-
-.nav-dropdown__waves {
-  height: 20%;
-  width: 100%;
-}
-
