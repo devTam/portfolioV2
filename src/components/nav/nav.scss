@@ -34,7 +34,6 @@
 }
 
 .nav__menu {
-
   cursor: pointer;
   font-family: 'Montserrat', sans-serif;
   transition: color 0.3s;
@@ -48,12 +47,16 @@
   outline-width: 0;
   font-size: 1rem;
 
+  &:disabled {
+    cursor: not-allowed;
+  }
+
   @media (hover: hover) {
     &:hover {
       color: var(--color-primary);
     }
   }
- 
+
   &-dot {
     color: var(--color-primary);
     margin-left: 2px;
@@ -64,15 +67,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  transition: top .8s ease-in;
+  transition: top 0.8s ease-in;
 }
-
-// Will use gsap to handle these in a timeline
 
 .close {
   top: -100%;
-}
-
-.toggle {
-  top: 100%;
 }

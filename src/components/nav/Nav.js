@@ -5,6 +5,7 @@ import './nav.scss';
 import NavDropdown from '../nav-dropdown/NavDropdown';
 
 const Nav = ({ history }) => {
+  const [disabled, setDisabled] = useState(false);
   const [state, setState] = useState({
     initial: false,
     clicked: null
@@ -20,6 +21,7 @@ const Nav = ({ history }) => {
   },[history])
 
   const handleClick = () => {
+    disableMenu()
     if(state.initial === false) {
       setState({
         initial: null,
@@ -36,16 +38,23 @@ const Nav = ({ history }) => {
     }
   }
 
+  const disableMenu = () => {
+    setDisabled(!disabled);
+    setTimeout(() => {
+      setDisabled(false)
+    }, 1200)
+  }
+
   return (
     <div className="nav">
       <div className="nav__logo-container" onClick={() => history.push("/")}>
           <Logo className="nav__logo"/>
       </div>
-      <button className="nav__menu" onClick={handleClick}>
-        <h4 className={`nav__menu-item open ${state.clicked && "toggle"}`}>
+      <button className="nav__menu" onClick={handleClick} disabled={disabled}>
+        <h4 className='nav__menu-item open'>
           menu<span className="nav__menu-dot">.</span>
         </h4>
-        <h4 className={`nav__menu-item ${!state.clicked && "close"}`}>
+        <h4 className='nav__menu-item close'>
           close<span className="nav__menu-dot">.</span>
         </h4>
       </button>

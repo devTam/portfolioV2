@@ -25,10 +25,33 @@ const NavDropdown = ({ state }) => {
         dropdownRef,
         iconsRef
       );
+      const menu = gsap.timeline()
+      menu.to('.close', {
+        duration: 0,
+        delay: .5,
+        top: '-100%',
+        ease: 'power3.inOut',
+      })
+      .to('.open', {
+        duration: 0,
+        top: 0,
+        ease: 'power3.inOut',
+      });
     } else if (
       state.clicked === true ||
       (state.clicked === true && state.initial === null)
     ) {
+      const menu = gsap.timeline()
+      menu.to('.open', {
+        duration: 0,
+        top: '100%',
+        ease: 'power3.inOut',
+      })
+      .to('.close', {
+        duration: 0,
+        top: 0,
+        ease: 'power3.inOut',
+      })
       openNavAnim(
         openMenu,
         linkRef4,

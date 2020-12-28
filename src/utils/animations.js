@@ -1,3 +1,4 @@
+// CLOSE NAVIGATION
 export const closeNavAnim = (
   closeMenu,
   linkRef4,
@@ -39,7 +40,8 @@ export const closeNavAnim = (
     .to(dropdownRef.current, {
       duration: 1,
       css: { display: 'none' },
-    });
+    })
+    
 };
 
 export const openNavAnim = (
@@ -96,26 +98,36 @@ export const openNavAnim = (
     );
 };
 
-export const homepageAnim = (tl, headerRef, subheaderRef, buttonsRef ) => {
+// HOMEPAGE ANIMATION
+export const homepageAnim = (tl, headerRef, subheaderRef, buttonsRef) => {
   tl.from(headerRef.current, {
-    delay: .3,
+    delay: 0.3,
     opacity: 0,
     y: 60,
     duration: 1,
-    ease: 'power3.out'
+    ease: 'power3.out',
   })
-  .from(subheaderRef.current, {
-    opacity: 0,
-    y: 40,
-    duration: .8,
-    ease: 'power3.out'
-  }, '-=.6')
-  .from(buttonsRef.current, {
-    opacity: 0,
-    duration: .8,
-    ease: 'power3.inOut'
-  }, '-=.3')
-}
+    .from(
+      subheaderRef.current,
+      {
+        opacity: 0,
+        y: 40,
+        skewY: 7,
+        duration: 0.8,
+        ease: 'power3.out',
+      },
+      '-=.6'
+    )
+    .from(
+      buttonsRef.current,
+      {
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power3.inOut',
+      },
+      '-=.3'
+    );
+};
 
 export const projectsAnim = (tl, headerRef, projectsRef) => {
   tl.from(headerRef.current, {
@@ -123,8 +135,7 @@ export const projectsAnim = (tl, headerRef, projectsRef) => {
     fontSize: '20vw',
     duration: 1,
     ease: 'power3.inOut',
-  })
-  .from(projectsRef.current, {
-    opacity: 0
-  })
-}
+  }).from(projectsRef.current, {
+    opacity: 0,
+  });
+};

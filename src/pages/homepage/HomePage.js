@@ -2,24 +2,20 @@ import React, { useEffect, useRef } from 'react';
 import './homepage.scss';
 import { Link } from 'react-router-dom';
 import Canvas from '../../components/canvas/Canvas';
-import gsap from 'gsap'
+import gsap from 'gsap';
 import { homepageAnim } from '../../utils/animations';
 
-
 const HomePage = () => {
-  const headerRef = useRef(null)
-  const subheaderRef = useRef(null)
-  const buttonsRef = useRef(null)
+  const headerRef = useRef(null);
+  const subheaderRef = useRef(null);
+  const buttonsRef = useRef(null);
   useEffect(() => {
-    const tl = gsap.timeline()
-    homepageAnim(tl, headerRef, subheaderRef, buttonsRef)
+    const tl = gsap.timeline();
+    homepageAnim(tl, headerRef, subheaderRef, buttonsRef);
     Canvas();
-
   }, []);
   return (
-    <div
-      className="homepage"
-    >
+    <div className="homepage">
       <div className="homepage__container">
         <div className="homepage__title">
           <h1 className="homepage__title-items" ref={headerRef}>
