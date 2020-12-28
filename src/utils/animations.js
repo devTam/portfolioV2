@@ -112,9 +112,9 @@ export const homepageAnim = (tl, headerRef, subheaderRef, buttonsRef ) => {
   }, '-=.6')
   .from(buttonsRef.current, {
     opacity: 0,
-    duration: .4,
+    duration: .8,
     ease: 'power3.inOut'
-  })
+  }, '-=.3')
 }
 
 export const projectsAnim = (tl, headerRef, projectsRef) => {
