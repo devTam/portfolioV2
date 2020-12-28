@@ -5,13 +5,14 @@ import SocialIcons from '../../components/social-icons/SocialIcons';
 import Slider from 'react-slick';
 
 const Contact = () => {
+  // Slider settings
   const settings = {
     infinite: true,
     slidesToShow: 1,
     spped: 3000,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 3000,
     vertical: true,
     arrows: false,
     cssEase: 'ease-out',
@@ -20,6 +21,7 @@ const Contact = () => {
   };
   useEffect(() => {
     undoCanvas();
+
   }, []);
   return (
     <div className="contact">

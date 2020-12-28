@@ -98,7 +98,7 @@ export const openNavAnim = (
 
 export const homepageAnim = (tl, headerRef, subheaderRef, buttonsRef ) => {
   tl.from(headerRef.current, {
-    delay: .5,
+    delay: .3,
     opacity: 0,
     y: 60,
     duration: 1,
@@ -112,7 +112,7 @@ export const homepageAnim = (tl, headerRef, subheaderRef, buttonsRef ) => {
   }, '-=.6')
   .from(buttonsRef.current, {
     opacity: 0,
-    duration: .8,
+    duration: .4,
     ease: 'power3.inOut'
   })
 }

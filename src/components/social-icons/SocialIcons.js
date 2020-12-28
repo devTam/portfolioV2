@@ -1,7 +1,25 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import "./socialIcons.scss";
+import gsap from 'gsap'
 
 const SocialIcons = () => {
+
+  const link1 = useRef(null)
+  const link2 = useRef(null)
+  const link3 = useRef(null)
+ 
+  useEffect(() => {
+    gsap.from([link3.current, link2.current, link1.current], {
+      opacity: 0,
+      y: -80,
+      delay: 1,
+      ease: 'bounce.out',
+      duration: 1,
+      stagger: .5
+    })
+  }, [])
+
+
     return (
         <div className="projects__socials">
       <a
@@ -9,6 +27,7 @@ const SocialIcons = () => {
               className="projects-icons"
               target="_blank"
               rel="noreferrer"
+              ref={link1}
             >
               <i className="fab fa-linkedin"></i>
 
@@ -18,10 +37,11 @@ const SocialIcons = () => {
               className="projects-icons"
               target="_blank"
               rel="noreferrer"
+              ref={link2}
             >
               <i className="fab fa-twitter-square"></i>
             </a>
-            <a href="mailto:tammy.batubo@gmail.com" className="projects-icons">
+            <a href="mailto:tammy.batubo@gmail.com" className="projects-icons" ref={link3}>
               <i className="fab fa-google-plus-square"></i>
             </a>
       </div>
