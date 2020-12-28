@@ -1,23 +1,30 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { undoCanvas } from '../../utils/undoCanvas';
 import './projects.scss';
 import projectDetails from '../../utils/projectDetails';
 import Row from '../../components/row/Row';
 import SocialIcons from '../../components/social-icons/SocialIcons';
+import gsap from 'gsap';
+import { projectsAnim } from '../../utils/animations';
 
 const Projects = () => {
+  const headerRef = useRef(null);
+  const projectsRef = useRef(null);
   useEffect(() => {
     undoCanvas();
+
+    const tl = gsap.timeline();
+    projectsAnim(tl, headerRef, projectsRef);
   }, []);
 
   return (
     <div className="projects">
       <div className="projects__container">
-        <h1 className="projects__title">
+        <h1 className="projects__title" ref={headerRef}>
           Projects<span>.</span>
         </h1>
 
-        <div className="projects__display">
+        <div className="projects__display" ref={projectsRef}>
           {projectDetails.map((project, idx) => {
             return (
               <Row
@@ -45,7 +52,6 @@ const Projects = () => {
         ></path>
       </svg>
       <SocialIcons />
-      
     </div>
   );
 };

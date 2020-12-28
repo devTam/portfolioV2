@@ -95,3 +95,36 @@ export const openNavAnim = (
       }
     );
 };
+
+export const homepageAnim = (tl, headerRef, subheaderRef, buttonsRef ) => {
+  tl.from(headerRef.current, {
+    delay: .5,
+    opacity: 0,
+    y: 60,
+    duration: 1,
+    ease: 'power3.out'
+  })
+  .from(subheaderRef.current, {
+    opacity: 0,
+    y: 40,
+    duration: .8,
+    ease: 'power3.out'
+  }, '-=.6')
+  .from(buttonsRef.current, {
+    opacity: 0,
+    duration: .8,
+    ease: 'power3.inOut'
+  })
+}
+
+export const projectsAnim = (tl, headerRef, projectsRef) => {
+  tl.from(headerRef.current, {
+    y: 300,
+    fontSize: '20vw',
+    duration: 1,
+    ease: 'power3.inOut',
+  })
+  .from(projectsRef.current, {
+    opacity: 0
+  })
+}
