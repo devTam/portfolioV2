@@ -1,7 +1,7 @@
 import React from 'react';
 import './row.scss';
 
-const Row = ({ image, name, desc, demo, github, displayRight }) => {
+const Row = ({ image, name, desc, demo, github, displayRight, nogithub }) => {
   return (
     <div className="row">
       <div className={`row__image ${displayRight && 'display-right'}`}>
@@ -12,11 +12,14 @@ const Row = ({ image, name, desc, demo, github, displayRight }) => {
         <p className="row__desc">{desc}</p>
         <div className="row__buttons">
           <a href={demo} className="row__btn" target="_blank" rel="noreferrer">
-            Demo site
+            Visit website
           </a>
+          {
+            !nogithub &&
           <a href={github} className="row__btn" target="_blank" rel="noreferrer">
             View on Github
           </a>
+          }
         </div>
       </div>
     </div>

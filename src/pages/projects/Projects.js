@@ -33,6 +33,7 @@ const Projects = () => {
                 desc={project.desc}
                 demo={project.demo}
                 github={project.github}
+                nogithub={project.nogithub}
                 key={idx}
                 displayRight={idx % 2 !== 0 ? true : false}
               />

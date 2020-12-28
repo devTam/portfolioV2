@@ -33,7 +33,8 @@ const projectDetails = [
     name: 'Olla IPS',
     desc: 'Olla Systems Limited’s Integrated Promotion Systems (IPS) is a reward promotional system developed to build customer loyalty and generate increased patronage to organisations with exceptional products and services.',
     demo: 'https://olla-ips.netlify.app',
-    github: 'https://github.com/devTam/Olla-IPS'
+    github: 'https://github.com/devTam/Olla-IPS',
+    nogithub: true
   },
   {
     image: 'https://i.postimg.cc/sxDcqLVq/pomodoro-min.png',
