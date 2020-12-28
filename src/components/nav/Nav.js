@@ -14,7 +14,7 @@ const Nav = ({ history }) => {
   useEffect(() => {
    history.listen(() => {
      setState({
-
+      clicked: false
      });
    }) 
   },[history])
