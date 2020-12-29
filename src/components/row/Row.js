@@ -26,4 +26,4 @@ const Row = ({ image, name, desc, demo, github, displayRight, nogithub }) => {
   );
 };
 
-export default Row;
+export default React.memo(Row);

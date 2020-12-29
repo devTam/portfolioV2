@@ -19,15 +19,15 @@ const HomePage = () => {
       <div className="homepage__container">
         <div className="homepage__title">
           <h1 className="homepage__title-items" ref={headerRef}>
-            I create <span>beautiful</span> and <span>performant</span> websites
-            & apps with <span>great</span> User experience
+          Front End developer & UI/UX designer
+            
           </h1>
         </div>
 
         <div className="homepage__subtitle">
-          <h3 className="homepage__subtitle-items" ref={subheaderRef}>
-            Front End developer & UI/UX designer
-          </h3>
+          <h2 className="homepage__subtitle-items" ref={subheaderRef}>
+          I create <span>beautiful</span> and <span>performant</span> user interfaces.
+          </h2>
         </div>
 
         <div className="homepage__btns" ref={buttonsRef}>

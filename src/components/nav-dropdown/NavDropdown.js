@@ -132,4 +132,4 @@ const NavDropdown = ({ state }) => {
   );
 };
 
-export default NavDropdown;
+export default React.memo(NavDropdown);

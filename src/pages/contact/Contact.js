@@ -42,10 +42,10 @@ const Contact = () => {
             </Slider>
           </div>
         </h1>
-        <h4 className="contact__desc">
+        <h2 className="contact__desc">
           Feel free to reach out if you are interested in working together or
           just want to talk about fitness or anime 🤭
-        </h4>
+        </h2>
       <a href="mailto:tammy.batubo@gmail.com" className="contact__btn">Send a message <span>💬</span></a>
       </div>
       <svg
