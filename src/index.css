@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   box-sizing: border-box;
@@ -8,21 +7,22 @@ body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   background-color: #000000;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' %3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(0,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%23f4cb73'/%3E%3Cstop offset='1' stop-color='%23f4cb73'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpattern id='b' width='9' height='9' patternUnits='userSpaceOnUse'%3E%3Ccircle fill='%23000000' cx='4.5' cy='4.5' r='4.5'/%3E%3C/pattern%3E%3Crect width='100%25' height='100%25' fill='url(%23a)'/%3E%3Crect width='100%25' height='100%25' fill='url(%23b)' fill-opacity='0.13'/%3E%3C/svg%3E");
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(78, 40, 40, 0.2)),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' %3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(0,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%23f4cb73'/%3E%3Cstop offset='1' stop-color='%23f4cb73'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpattern id='b' width='9' height='9' patternUnits='userSpaceOnUse'%3E%3Ccircle fill='%23000000' cx='4.5' cy='4.5' r='4.5'/%3E%3C/pattern%3E%3Crect width='100%25' height='100%25' fill='url(%23a)'/%3E%3Crect width='100%25' height='100%25' fill='url(%23b)' fill-opacity='0.13'/%3E%3C/svg%3E");
   background-attachment: fixed;
   background-size: cover;
   visibility: hidden;
 }
 
 :root {
-  --color-primary : #EEB336;
+  --color-primary: #eeb336;
   --white: #fff;
   --white-bg: #e5e5e5;
   --black: #080808;
   --padding-desktop: 60px;
-  --padding-mobile:8px;
+  --padding-mobile: 8px;
   --text-white: #fdf9d1;
-  --dark-primary: #261A01;
+  --dark-primary: #261a01;
   --text-black: #333;
   --nav-easing: cubic-bezier(0.54, 0.02, 1, 0.47);
 }
