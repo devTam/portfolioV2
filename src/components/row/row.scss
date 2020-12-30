@@ -86,10 +86,6 @@
   .row__desc {
     margin-bottom: 20px;
     font-size: 1rem;
-
-    @media only screen and (max-width: 576px) {
-      font-size: 0.9rem;
-    }
   }
 
   .row__buttons {
@@ -103,8 +99,8 @@
 
   .row__btn {
     font-size: 0.9rem;
-    color: var(--text-black);
-    padding: 8px 15px;
+    color: #000;
+    padding: 10px 15px;
     margin-right: 1em;
     margin-bottom: 10px;
     text-decoration: none;
@@ -119,7 +115,7 @@
     z-index: 0;
 
     @media only screen and (max-width: 576px) {
-      font-size: 0.7rem;
+      font-size: 0.9rem;
     }
 
     @media (hover: hover) {

@@ -104,7 +104,7 @@
   font-size: 1rem;
   cursor: pointer;
   text-decoration: none;
-  color: var(--black);
+  color: #000;
   background-color: var(--text-white);
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s;
@@ -112,7 +112,7 @@
   backface-visibility: hidden;
 
   @media only screen and (max-width: 768px) {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   @media only screen and (max-width: 576px) {
@@ -132,25 +132,6 @@
 
 .btn-secondary {
   background: linear-gradient(90deg, #fdebc5, #f4cb73);
-}
-
-.blobs {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  overflow: hidden;
-
-  & .blob {
-    width: 70vw;
-    animation: rotate 20s infinite linear;
-  }
-}
-
-@keyframes rotate {
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 canvas {

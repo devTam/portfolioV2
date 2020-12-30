@@ -37,10 +37,7 @@ export const closeNavAnim = (
       },
       '-=.5'
     )
-    .to(dropdownRef.current, {
-      duration: 1,
-      css: { display: 'none' },
-    })
+    
     
 };
 
@@ -54,10 +51,6 @@ export const openNavAnim = (
   iconsRef
 ) => {
   openMenu
-    .to(dropdownRef.current, {
-      duration: 0,
-      css: { display: 'block' },
-    })
     .to(dropdownRef.current, {
       duration: 0,
       opacity: 1,

@@ -15,12 +15,12 @@
   padding: 0 var(--padding-desktop);
   position: relative;
   z-index: 1;
-  animation: fadeIn 1s .5s forwards;
+  animation: fadeIn 1s 0.5s forwards;
   opacity: 0;
 
   @keyframes fadeIn {
     to {
-      opacity: 1
+      opacity: 1;
     }
   }
 
@@ -65,13 +65,20 @@
   overflow-y: hidden;
 }
 
+.slick-track {
+  position: relative;
+  z-index: -1;
+}
+
 .swap {
   outline-width: 0;
 }
 
 .contact__desc {
   margin-left: 4rem;
-  color: var(--text-black);
+  color: #000;
+  position: relative;
+  z-index: 10;
   width: 100%;
   max-width: 520px;
   line-height: 1.5;
@@ -82,6 +89,8 @@
 }
 
 .contact__btn {
+  position: relative;
+  z-index: 10;
   padding: 15px 30px;
   display: inline-block;
   border: none;
@@ -89,15 +98,13 @@
   margin-top: 2rem;
   margin-left: 4rem;
   background: linear-gradient(90deg, #e5e5e5, #fafafa);
-  color: var(--text-black);
+  color: #000;
   font-weight: bold;
   font-size: 1rem;
   cursor: pointer;
   text-decoration: none;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s;
-  transform: translateZ(0);
-  backface-visibility: hidden;
 
   @media only screen and (max-width: 992px) {
     margin-left: 0;
@@ -106,7 +113,6 @@
   @media only screen and (max-width: 576px) {
     margin: 0 var(--padding-mobile);
     margin-top: 2rem;
-    font-size: 0.9rem;
     padding: 15px 20px;
 
     & span {
@@ -151,5 +157,4 @@
   position: absolute;
   right: -80px;
   top: -130px;
-  
 }

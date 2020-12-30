@@ -12,10 +12,15 @@ const NavDropdown = ({ state }) => {
   const linkRef3 = useRef(null);
   const linkRef4 = useRef(null);
   const iconsRef = useRef(null);
+
+  // Gsap timelines
+  const closeMenu = gsap.timeline();
+  const openMenu = gsap.timeline();
+  const menu = gsap.timeline();
+
   useEffect(() => {
-    const closeMenu = gsap.timeline();
-    const openMenu = gsap.timeline();
     if (state.clicked === false) {
+
       closeNavAnim(
         closeMenu,
         linkRef4,
@@ -41,7 +46,8 @@ const NavDropdown = ({ state }) => {
       state.clicked === true ||
       (state.clicked === true && state.initial === null)
     ) {
-      const menu = gsap.timeline()
+      
+
       menu.to('.open', {
         duration: 0,
         top: '100%',
@@ -52,6 +58,7 @@ const NavDropdown = ({ state }) => {
         top: 0,
         ease: 'power3.inOut',
       })
+    
       openNavAnim(
         openMenu,
         linkRef4,
@@ -62,7 +69,7 @@ const NavDropdown = ({ state }) => {
         iconsRef
       );
     }
-  }, [state]);
+  }, [state, closeMenu, openMenu, menu]);
 
   return (
     <div className="nav-dropdown" ref={dropdownRef}>

@@ -1,5 +1,5 @@
 .nav-dropdown {
-  height: 100vh;
+  height: 0vh;
   width: 100%;
   position: absolute;
   top: 8vh;
@@ -12,7 +12,6 @@
   flex-direction: column;
   background-color: var(--black);
   overflow: hidden;
-  display: none;
 }
 
 .menu-layer {
