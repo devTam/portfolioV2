@@ -1,7 +1,7 @@
 // CLOSE NAVIGATION
 export const closeNavAnim = (
   closeMenu,
-  linkRef4,
+  // linkRef4,
   linkRef3,
   linkRef2,
   linkRef1,
@@ -20,7 +20,7 @@ export const closeNavAnim = (
       '-=.2'
     )
     .to(
-      [linkRef4.current, linkRef3.current, linkRef2.current, linkRef1.current],
+      [linkRef3.current, linkRef2.current, linkRef1.current],
       {
         y: 100,
         duration: 0.5,
@@ -43,7 +43,7 @@ export const closeNavAnim = (
 
 export const openNavAnim = (
   openMenu,
-  linkRef4,
+  // linkRef4,
   linkRef3,
   linkRef2,
   linkRef1,
@@ -64,7 +64,7 @@ export const openNavAnim = (
       ease: 'power3.inOut',
     })
     .fromTo(
-      [linkRef1.current, linkRef2.current, linkRef3.current, linkRef4.current],
+      [linkRef1.current, linkRef2.current, linkRef3.current],
       {
         y: 100,
         duration: 0.5,

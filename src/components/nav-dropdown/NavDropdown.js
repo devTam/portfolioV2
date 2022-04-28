@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import './nav-dropdown.scss';
 import { NavLink } from 'react-router-dom';
 import gsap from 'gsap';
-import Resume from '../../assets/TammyBatuboResume.pdf';
+// import Resume from '../../assets/TammyBatuboResume.pdf';
 import { closeNavAnim, openNavAnim } from '../../utils/animations';
 
 const NavDropdown = ({ state }) => {
@@ -10,7 +10,7 @@ const NavDropdown = ({ state }) => {
   const linkRef1 = useRef(null);
   const linkRef2 = useRef(null);
   const linkRef3 = useRef(null);
-  const linkRef4 = useRef(null);
+  // const linkRef4 = useRef(null);
   const iconsRef = useRef(null);
 
   // Gsap timelines
@@ -23,7 +23,7 @@ const NavDropdown = ({ state }) => {
 
       closeNavAnim(
         closeMenu,
-        linkRef4,
+        // linkRef4,
         linkRef3,
         linkRef2,
         linkRef1,
@@ -61,7 +61,7 @@ const NavDropdown = ({ state }) => {
     
       openNavAnim(
         openMenu,
-        linkRef4,
+        // linkRef4,
         linkRef3,
         linkRef2,
         linkRef1,
@@ -96,7 +96,7 @@ const NavDropdown = ({ state }) => {
               Contact
             </NavLink>
           </div>
-          <div className="nav-item-container">
+          {/* <div className="nav-item-container">
             <a
               href={Resume}
               className="nav-item"
@@ -106,7 +106,7 @@ const NavDropdown = ({ state }) => {
               <i className="fas fa-file-download"></i>
               Resume
             </a>
-          </div>
+          </div> */}
         </div>
         <div className="nav-socials">
           <div className="nav-icons-container" ref={iconsRef}>
